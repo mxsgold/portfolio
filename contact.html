@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты — Ваше Имя</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="index.html">Ваше Имя</a>
+  <nav><a href="index.html">Главная</a><a href="projects.html">Проекты</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a></nav>
+</div></header>
+<main class="wrap">
+<h1 class="page-title">Контакты</h1>
+<a class="mail" href="mailto:hello@example.com">hello@example.com</a>
+<form novalidate>
+  <label>Имя<input name="name" autocomplete="name"><span class="err"></span></label>
+  <label>Email<input name="email" type="email" autocomplete="email"><span class="err"></span></label>
+  <label>Сообщение<textarea name="msg"></textarea><span class="err"></span></label>
+  <div><button class="btn primary" type="submit">Отправить сообщение</button></div>
+  <p class="status ok" role="status"></p>
+</form>
+</main>
+<footer><div class="wrap"><span>© 2026 Ваше Имя</span><span><a href="https://github.com">GitHub</a> &nbsp; <a href="https://linkedin.com">LinkedIn</a></span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
