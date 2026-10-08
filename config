@@ -1,0 +1,1 @@
+window.RAVE_CONFIG={SUPABASE_URL:"https://cbgfeygxjcwusvsiokow.supabase.co",SUPABASE_KEY:"sb_publishable_hhuk9u9Ubhuh4FlPnoYkfA_4eSkmenc",STORAGE_BUCKET:"videos"};
