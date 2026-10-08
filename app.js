@@ -28,7 +28,8 @@ up.onclick=async()=>{
       endpoint:storageEndpoint,
       retryDelays:[0,3000,5000,10000,20000],
       headers:{
-        authorization:"Bearer "+cfg.SUPABASE_KEY,
+        // New Supabase publishable keys are NOT JWTs.
+        // They must be sent as apikey, not Authorization: Bearer.
         apikey:cfg.SUPABASE_KEY,
         "x-upsert":"false"
       },
