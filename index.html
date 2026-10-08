@@ -1,1 +1,62 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RAVE — Watch together</title><link rel="stylesheet" href="style.css"></head><body><main class="shell"><div class="brand">RAVE<span>●</span></div><section class="hero"><p class="eyebrow">WATCH TOGETHER</p><h1>Two screens.<br><span>One timeline.</span></h1><p>Upload a video, create a room, send the link to a friend and watch together in sync.</p></section><section class="card"><div class="head"><div><small>VIDEO</small><h2>Bring your own video</h2></div><b>MP4 · WebM · OGG</b></div><label class="drop" for="videoFile"><input id="videoFile" type="file" accept="video/*" hidden><strong id="fileName">Choose a video</strong><span id="fileHint">Upload it to shared storage</span></label><input id="videoUrl" type="url" placeholder="Or paste a direct video URL (.mp4, .webm...)"><div class="actions"><button id="uploadBtn" class="secondary">Upload video</button><button id="createBtn" class="primary">Create room →</button></div><div id="status"></div></section><div class="steps"><div><b>01</b> Upload or paste a direct video URL.</div><div><b>02</b> Create a private room link.</div><div><b>03</b> Send it to one friend and press play.</div></div><footer>RAVE · Built for two · Video streams directly to each browser</footer></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="https://cdn.jsdelivr.net/npm/tus-js-client@4/dist/tus.min.js"></script><script src="config.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAVE — Watch together</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+  <header class="brand">RAVE<span>●</span></header>
+
+  <section class="hero">
+    <p class="eyebrow">WATCH TOGETHER</p>
+    <h1>Two screens.<br><span>One timeline.</span></h1>
+    <p>Upload a video, create a room, send the link to a friend and watch together in sync.</p>
+  </section>
+
+  <section class="card">
+    <div class="head">
+      <div><small>VIDEO</small><h2>Bring your own video</h2></div>
+      <b>MP4 · WebM · OGG</b>
+    </div>
+
+    <label class="drop" id="dropZone" for="videoFile">
+      <input id="videoFile" type="file" accept="video/mp4,video/webm,video/ogg,video/*" hidden>
+      <strong id="fileName">Choose a video</strong>
+      <span id="fileHint">Click here or drag a video into this box</span>
+    </label>
+
+    <div class="progress" id="progressWrap" hidden>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="progress-meta"><span id="progressText">0%</span><span id="progressBytes"></span></div>
+    </div>
+
+    <input id="videoUrl" type="url" placeholder="Or paste a direct video URL (.mp4, .webm...)">
+
+    <div class="actions">
+      <button id="uploadBtn" class="secondary" type="button">Upload video</button>
+      <button id="createBtn" class="primary" type="button">Create room →</button>
+    </div>
+
+    <div id="status" role="status" aria-live="polite"></div>
+    <details class="debug">
+      <summary>Technical details</summary>
+      <pre id="debugLog">Waiting…</pre>
+    </details>
+  </section>
+
+  <div class="steps">
+    <div><b>01</b> Pick a video or paste a direct URL.</div>
+    <div><b>02</b> Upload it and create a room.</div>
+    <div><b>03</b> Send the room link to your friend.</div>
+  </div>
+
+  <footer>RAVE · Video streams directly to each browser</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
