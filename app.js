@@ -150,6 +150,7 @@
         result.path.split("/").map(encodeURIComponent).join("/");
 
       videoUrl.value = uploadedUrl;
+      localStorage.setItem("rave:lastVideoUrl", uploadedUrl);
       setStatus("Upload complete. Now create the room.", "success");
       progressBar.style.width = "100%";
       progressText.textContent = "100%";
@@ -187,6 +188,7 @@
     }
 
     const roomId = crypto.randomUUID().replaceAll("-", "").slice(0, 10);
+    localStorage.setItem("rave:lastVideoUrl", url);
     log("Creating room:", roomId);
     location.href = "room.html?room=" + encodeURIComponent(roomId) +
       "&video=" + encodeURIComponent(url);
