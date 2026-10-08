@@ -90,7 +90,6 @@
     const xhr = new XMLHttpRequest();
     xhr.open("POST", endpoint, true);
     xhr.setRequestHeader("apikey", cfg.SUPABASE_KEY);
-    xhr.setRequestHeader("Authorization", "Bearer " + cfg.SUPABASE_KEY);
     xhr.setRequestHeader("x-upsert", "false");
     xhr.setRequestHeader("cache-control", "3600");
     xhr.setRequestHeader("content-type", file.type || "video/mp4");
